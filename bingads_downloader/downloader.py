@@ -278,6 +278,7 @@ def build_campaign_performance_request_for_single_day(api_client: BingReportClie
         "TimePeriod",
         "CampaignName",
         "CampaignId",
+        "Spend",
         "CampaignLabels"
     ])
     report_request.Columns = report_columns
