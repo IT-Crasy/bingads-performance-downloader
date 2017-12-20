@@ -258,6 +258,7 @@ def build_campaign_performance_request_for_single_day(api_client: BingReportClie
     report_request.ReportName = 'My Campaign Performance Report'
     report_request.ReturnOnlyCompleteData = False
     report_request.Language = 'English'
+    report_request.Aggregation = 'Daily'
     report_time = api_client.factory.create('ReportTime')
 
     # You may either use a custom date range
