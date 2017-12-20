@@ -257,8 +257,6 @@ def build_campaign_performance_request_for_single_day(api_client: BingReportClie
     report_request.Format = 'Csv'
     report_request.ReportName = 'My Campaign Performance Report'
     report_request.ReturnOnlyCompleteData = False
-    report_request.Aggregation = 'Daily'
-    report_request.Language = 'English'
 
     report_time = api_client.factory.create('ReportTime')
 
@@ -274,13 +272,12 @@ def build_campaign_performance_request_for_single_day(api_client: BingReportClie
 
     report_columns = api_client.factory.create('ArrayOfCampaignPerformanceReportColumn')
     report_columns.CampaignPerformanceReportColumn.append([
-        "TimePeriod",
-        "AccountId",
         "AccountName",
-        "CampaignId",
+        "AccountId",
+        "TimePeriod",
         "CampaignName",
+        "CampaignId",
         "CampaignLabels"
-
     ])
     report_request.Columns = report_columns
     return report_request
