@@ -283,13 +283,6 @@ def build_campaign_performance_request_for_single_day(api_client: BingReportClie
 
     ])
     report_request.Columns = report_columns
-
-    report_sorts = api_client.factory.create('ArrayOfCampaignPerformanceReportSort')
-    report_sort = api_client.factory.create('CampaignPerformanceReportSort')
-    report_sort.SortColumn = 'CampaignId'
-    report_sort.SortOrder = 'Ascending'
-    report_sorts.KeywordPerformanceReportSort.append(report_sort)
-    report_request.Sort = report_sorts
     return report_request
 
 def submit_and_download(report_request, api_client, data_dir, data_file):
