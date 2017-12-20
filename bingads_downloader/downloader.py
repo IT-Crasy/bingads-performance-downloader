@@ -273,7 +273,7 @@ def build_campaign_performance_request_for_single_day(api_client: BingReportClie
     report_request.Time = report_time
 
     report_columns = api_client.factory.create('ArrayOfCampaignPerformanceReportColumn')
-    report_columns.KeywordPerformanceReportColumn.append([
+    report_columns.CampaignPerformanceReportColumn.append([
         "TimePeriod",
         "AccountId",
         "AccountName",
