@@ -22,5 +22,5 @@ setup(
             'refresh-bingsads-api-oauth2-token=bingads_downloader.cli:refresh_oauth2_token'
         ]
     },
-    python_requires='>=3.6'
+    python_requires='>=3.5'
 )
